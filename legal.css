@@ -310,8 +310,9 @@
     align-items: flex-start;
   }
 
+  /* Above a11y FAB (left) + home-indicator safe area */
   .cookie-overlay {
-    inset: auto 12px 12px 12px;
+    inset: auto 12px calc(68px + env(safe-area-inset-bottom, 0px)) 12px;
     width: auto;
   }
 

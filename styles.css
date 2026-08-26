@@ -644,6 +644,24 @@ ul {
   .why-row {
     grid-template-columns: 1fr;
   }
+
+  /* Room for a11y FAB + home indicator on phones */
+  .footer {
+    padding-bottom: calc(28px + 56px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .site-nav {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  .site-nav-inner {
+    height: 54px;
+    width: min(100% - 24px, 1400px);
+  }
+
+  .site-nav-logo img {
+    height: 36px;
+  }
 }
 
 @media (min-width: 1400px) {

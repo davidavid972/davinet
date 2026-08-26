@@ -248,8 +248,8 @@ html.a11y-gray .a11y-panel {
 
 @media (max-width: 600px) {
   .a11y-fab {
-    left: 12px;
-    bottom: 12px;
+    left: max(12px, env(safe-area-inset-left, 0px));
+    bottom: max(12px, env(safe-area-inset-bottom, 0px));
     width: 50px;
     height: 50px;
   }
@@ -258,8 +258,14 @@ html.a11y-gray .a11y-panel {
     left: 12px;
     right: 12px;
     width: auto;
-    bottom: 72px;
+    bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+    max-height: min(62vh, 480px);
   }
+}
 
-  /* Cookie is bottom-right; fab bottom-left – ok on mobile */
+/* Hide trail toggle on touch devices (effect is desktop-only) */
+@media (hover: none), (pointer: coarse) {
+  #trailToggle {
+    display: none !important;
+  }
 }
