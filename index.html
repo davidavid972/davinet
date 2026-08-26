@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="legal.css" />
+  <link rel="stylesheet" href="a11y.css" />
   <link rel="icon" href="images/favicon.ico?v=3" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png?v=3" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png?v=3" />
@@ -277,6 +278,38 @@
     </div>
   </div>
 
+  <!-- Accessibility widget -->
+  <button type="button" class="a11y-fab" id="a11yFab" aria-label="תפריט נגישות" aria-expanded="false" aria-controls="a11yPanel">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="12" cy="4.5" r="2.2" fill="currentColor"/>
+      <path d="M5 10.5h14M12 10.5v4.5M8.5 21l3.5-6 3.5 6M7 15h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <div class="a11y-panel" id="a11yPanel" role="dialog" aria-label="אפשרויות נגישות" hidden>
+    <div class="a11y-panel-head">
+      <h2>נגישות</h2>
+      <button type="button" class="a11y-panel-close" id="a11yClose" aria-label="סגור">×</button>
+    </div>
+    <div class="a11y-grid">
+      <button type="button" class="a11y-btn" data-a11y="a11y-text-lg" aria-pressed="false">הגדלת טקסט</button>
+      <button type="button" class="a11y-btn" data-a11y="a11y-text-sm" aria-pressed="false">הקטנת טקסט</button>
+      <button type="button" class="a11y-btn" data-a11y="a11y-contrast" aria-pressed="false">ניגודיות גבוהה</button>
+      <button type="button" class="a11y-btn" data-a11y="a11y-invert" aria-pressed="false">ניגודיות הפוכה</button>
+      <button type="button" class="a11y-btn" data-a11y="a11y-gray" aria-pressed="false">גווני אפור</button>
+      <button type="button" class="a11y-btn" data-a11y="a11y-links" aria-pressed="false">הדגשת קישורים</button>
+      <button type="button" class="a11y-btn" data-a11y="a11y-readable" aria-pressed="false">גופן קריא</button>
+      <button type="button" class="a11y-btn" data-a11y="a11y-spacing" aria-pressed="false">ריווח גדול</button>
+      <button type="button" class="a11y-btn" data-a11y="a11y-cursor" aria-pressed="false">סמן גדול</button>
+      <button type="button" class="a11y-btn" data-a11y="a11y-focus" aria-pressed="false">הדגשת פוקוס</button>
+      <button type="button" class="a11y-btn a11y-btn-wide" data-a11y="a11y-motion" aria-pressed="false">עצירת אנימציות</button>
+      <button type="button" class="a11y-btn a11y-btn-wide a11y-btn-reset" id="a11yReset">איפוס הגדרות</button>
+    </div>
+    <div class="a11y-panel-foot">
+      <a href="accessibility.html">להצהרת הנגישות המלאה</a>
+    </div>
+  </div>
+
   <script src="script.js"></script>
+  <script src="a11y.js"></script>
 </body>
 </html>
