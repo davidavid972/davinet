@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="legal.css" />
   <link rel="icon" href="images/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
@@ -15,6 +16,27 @@
   <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
 </head>
 <body>
+  <a class="skip-link" href="#home">דלג לתוכן</a>
+
+  <!-- Sticky nav: shows compact after scroll -->
+  <nav class="site-nav" id="siteNav" aria-label="ניווט ראשי">
+    <div class="site-nav-inner">
+      <a class="site-nav-logo" href="#home">
+        <img src="images/logo-banner.png" alt="DaviNet | IT SOLUTIONS" width="200" height="58" />
+      </a>
+      <div class="site-nav-links" id="navLinks">
+        <a href="#home" data-nav="home">בית</a>
+        <a href="#about" data-nav="about">אודות</a>
+        <a href="#services" data-nav="services">שירותים</a>
+        <a href="#why" data-nav="why">למה אני</a>
+        <a href="#contact" data-nav="contact">יצירת קשר</a>
+      </div>
+      <button class="site-nav-burger" id="navBurger" type="button" aria-label="תפריט" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
   <!-- Top third: exact design screenshot (sharp 2x) -->
   <header class="hero-exact" id="home">
     <img
@@ -25,7 +47,7 @@
       alt="DaviNet IT Solutions – מרגיש שהטכנולוגיה בעסק יצאה משליטה?"
     />
     <a class="hit hit-logo" href="#home" aria-label="DaviNet – בית"></a>
-    <nav class="hit-nav" aria-label="ניווט">
+    <nav class="hit-nav" aria-label="ניווט ב־hero">
       <a href="#home" class="hit" style="right:0;width:9%" aria-label="בית"></a>
       <a href="#about" class="hit" style="right:10%;width:11%" aria-label="אודות"></a>
       <a href="#services" class="hit" style="right:22%;width:13%" aria-label="שירותים"></a>
@@ -202,8 +224,59 @@
   </section>
 
   <footer class="footer">
+    <div class="wrap footer-links">
+      <a href="index.html">בית</a>
+      <a href="#contact">צור קשר</a>
+      <a href="privacy.html">מדיניות פרטיות</a>
+      <a href="accessibility.html">הצהרת נגישות</a>
+      <button type="button" class="footer-cookie-btn" id="openCookiePrefs">העדפות עוגיות</button>
+    </div>
     <p>© כל הזכויות שמורות | DaviNet IT Solutions</p>
   </footer>
+
+  <!-- Cookie consent -->
+  <div class="cookie-overlay" id="cookieOverlay" hidden>
+    <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookieTitle">
+      <button type="button" class="cookie-close" id="cookieClose" aria-label="סגור">×</button>
+      <p id="cookieTitle">
+        <strong>DaviNet</strong> משתמשת בעוגיות כדי להבטיח את תפקוד האתר ולשפר את חוויית המשתמש.
+        אפשר לבחור אילו סוגי עוגיות להפעיל.
+      </p>
+      <div class="cookie-actions">
+        <button type="button" class="cookie-btn cookie-btn-primary" id="cookieAcceptAll">קבל הכל</button>
+        <button type="button" class="cookie-btn cookie-btn-secondary" id="cookieEssential">הסר לא הכרחיות</button>
+        <button type="button" class="cookie-btn cookie-btn-secondary" id="cookiePrefsBtn">העדפות</button>
+      </div>
+      <a class="cookie-policy-link" href="privacy.html">מדיניות הפרטיות</a>
+
+      <div class="cookie-prefs" id="cookiePrefs" hidden>
+        <div class="cookie-pref-row">
+          <div>
+            <strong>הכרחיות</strong>
+            <span>נדרשות לתפעול האתר ולשמירת הבחירה שלך</span>
+          </div>
+          <input type="checkbox" checked disabled aria-label="עוגיות הכרחיות תמיד פעילות" />
+        </div>
+        <div class="cookie-pref-row">
+          <div>
+            <strong>אנליטיות</strong>
+            <span>מדידת תנועה ושיפור חוויית המשתמש</span>
+          </div>
+          <input type="checkbox" id="prefAnalytics" aria-label="אפשר עוגיות אנליטיות" />
+        </div>
+        <div class="cookie-pref-row">
+          <div>
+            <strong>שיווקיות</strong>
+            <span>פרסום ממוקד (למשל פיקסלים) – רק באישורך</span>
+          </div>
+          <input type="checkbox" id="prefMarketing" aria-label="אפשר עוגיות שיווקיות" />
+        </div>
+        <div class="cookie-actions" style="margin-top:14px;margin-bottom:0">
+          <button type="button" class="cookie-btn cookie-btn-primary" id="cookieSavePrefs">שמור העדפות</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
