@@ -183,18 +183,10 @@ ul {
   height: 11%;
 }
 
-.hit-nav {
-  position: absolute;
-  top: 1.2%;
-  left: 2%;
-  width: 55%;
-  height: 11%;
-  z-index: 5;
-}
-
-.hit-nav .hit {
-  top: 0;
-  height: 100%;
+.hit-nav-item {
+  top: 1.5%;
+  height: 12%;
+  z-index: 6;
 }
 
 /* Measured from design 1024×465 */
