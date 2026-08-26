@@ -1,23 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <defs>
-    <linearGradient id="dGrad" x1="8" y1="4" x2="20" y2="52" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FF3A9A"/>
-      <stop offset="45%" stop-color="#C43B9A"/>
-      <stop offset="100%" stop-color="#7B5AF5"/>
+    <linearGradient id="dGrad" x1="4" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF2E8A"/>
+      <stop offset="55%" stop-color="#B03AD0"/>
+      <stop offset="100%" stop-color="#6B3AF5"/>
     </linearGradient>
   </defs>
-  <!-- Floating pixels -->
-  <circle cx="6" cy="10" r="1.6" fill="url(#dGrad)"/>
-  <circle cx="11" cy="7" r="1.3" fill="url(#dGrad)"/>
-  <circle cx="4" cy="15" r="1.1" fill="url(#dGrad)"/>
-  <!-- Speed lines (left stem of D) -->
-  <rect x="8" y="9" width="16" height="3.2" rx="1.6" fill="url(#dGrad)"/>
-  <rect x="3" y="14.5" width="21" height="3.2" rx="1.6" fill="url(#dGrad)"/>
-  <rect x="6" y="20" width="18" height="3.2" rx="1.6" fill="url(#dGrad)"/>
-  <rect x="2" y="25.5" width="22" height="3.2" rx="1.6" fill="url(#dGrad)"/>
-  <rect x="5" y="31" width="19" height="3.2" rx="1.6" fill="url(#dGrad)"/>
-  <rect x="3" y="36.5" width="21" height="3.2" rx="1.6" fill="url(#dGrad)"/>
-  <rect x="7" y="42" width="17" height="3.2" rx="1.6" fill="url(#dGrad)"/>
-  <!-- D bowl (thick rounded) -->
-  <path d="M24 8.5 H28 C42 8.5 50 16.5 50 28 C50 39.5 42 47.5 28 47.5 H24 V43.2 H28 C39.2 43.2 45.5 36.5 45.5 28 C45.5 19.5 39.2 12.8 28 12.8 H24 V8.5 Z" fill="url(#dGrad)"/>
+  <!-- Motion dots -->
+  <circle cx="7" cy="14" r="1.8" fill="url(#dGrad)"/>
+  <circle cx="12" cy="10" r="1.4" fill="url(#dGrad)"/>
+  <circle cx="5" cy="20" r="1.2" fill="url(#dGrad)"/>
+  <!-- Speed lines -->
+  <rect x="10" y="12" width="18" height="3.6" rx="1.8" fill="url(#dGrad)"/>
+  <rect x="4" y="18.5" width="24" height="3.6" rx="1.8" fill="url(#dGrad)"/>
+  <rect x="8" y="25" width="20" height="3.6" rx="1.8" fill="url(#dGrad)"/>
+  <rect x="3" y="31.5" width="25" height="3.6" rx="1.8" fill="url(#dGrad)"/>
+  <rect x="7" y="38" width="21" height="3.6" rx="1.8" fill="url(#dGrad)"/>
+  <rect x="4" y="44.5" width="24" height="3.6" rx="1.8" fill="url(#dGrad)"/>
+  <rect x="9" y="51" width="19" height="3.6" rx="1.8" fill="url(#dGrad)"/>
+  <!-- D curve -->
+  <path d="M28 10.5 H32.5 C48 10.5 57 19.2 57 32 C57 44.8 48 53.5 32.5 53.5 H28 V48.8 H32.5 C45 48.8 52 41.2 52 32 C52 22.8 45 15.2 32.5 15.2 H28 V10.5 Z" fill="url(#dGrad)"/>
 </svg>
