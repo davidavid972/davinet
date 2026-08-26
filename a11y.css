@@ -262,10 +262,3 @@ html.a11y-gray .a11y-panel {
     max-height: min(62vh, 480px);
   }
 }
-
-/* Hide trail toggle on touch devices (effect is desktop-only) */
-@media (hover: none), (pointer: coarse) {
-  #trailToggle {
-    display: none !important;
-  }
-}
