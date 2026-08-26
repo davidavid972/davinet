@@ -60,7 +60,7 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
 });
 
 /* ===== Cookies ===== */
-const COOKIE_KEY = "davinet_cookie_consent";
+const COOKIE_KEY = "davinet_cookie_consent_v2";
 
 function readConsent() {
   try {
@@ -105,7 +105,6 @@ const prefMarketing = document.getElementById("prefMarketing");
 function openCookieBanner(forcePrefs) {
   if (!overlay) return;
   overlay.hidden = false;
-  document.body.style.overflow = "hidden";
   if (forcePrefs && prefsPanel) {
     prefsPanel.hidden = false;
     const existing = readConsent();
@@ -117,7 +116,6 @@ function openCookieBanner(forcePrefs) {
 function closeCookieBanner() {
   if (!overlay) return;
   overlay.hidden = true;
-  document.body.style.overflow = "";
   if (prefsPanel) prefsPanel.hidden = true;
 }
 
@@ -160,10 +158,8 @@ document.getElementById("openCookiePrefs")?.addEventListener("click", () => {
 });
 
 overlay?.addEventListener("click", (e) => {
-  if (e.target === overlay) {
-    if (!readConsent()) essentialOnly();
-    else closeCookieBanner();
-  }
+  // Corner banner – ignore backdrop clicks (no full-screen dim)
+  if (e.target === overlay) return;
 });
 
 const existingConsent = readConsent();

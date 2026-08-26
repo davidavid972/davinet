@@ -144,16 +144,16 @@
   gap: 10px 16px;
 }
 
-/* Cookie banner */
+/* Cookie banner – bottom corner, brand-matched */
 .cookie-overlay {
   position: fixed;
-  inset: 0;
+  inset: auto 16px 16px auto;
   z-index: 2000;
-  background: rgba(8, 12, 28, 0.55);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  background: transparent;
+  display: block;
+  padding: 0;
+  width: min(100% - 32px, 420px);
+  pointer-events: none;
 }
 
 .cookie-overlay[hidden] {
@@ -162,91 +162,106 @@
 
 .cookie-modal {
   position: relative;
-  width: min(100%, 640px);
-  background: #fff;
-  color: #1f2937;
-  border-radius: 16px;
-  padding: 28px 28px 22px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  width: 100%;
+  pointer-events: auto;
+  background: linear-gradient(135deg, #1a0a2e 0%, #3d1458 40%, #8e2470 75%, #c2185b 100%);
+  color: #fff;
+  border-radius: 18px;
+  padding: 22px 20px 18px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   direction: rtl;
   text-align: right;
+  animation: cookieIn 0.35s ease;
+}
+
+@keyframes cookieIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .cookie-close {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  width: 36px;
-  height: 36px;
+  top: 10px;
+  left: 10px;
+  width: 32px;
+  height: 32px;
   border: 0;
-  background: transparent;
-  font-size: 1.4rem;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 1.25rem;
   line-height: 1;
   cursor: pointer;
-  color: #6b7280;
+  color: rgba(255, 255, 255, 0.85);
   border-radius: 8px;
 }
 
 .cookie-close:hover {
-  background: #f3f4f6;
-  color: #111;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 
 .cookie-modal p {
-  font-size: 1rem;
-  line-height: 1.65;
-  margin: 0 0 20px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 0 0 16px;
   padding-left: 28px;
-  color: #374151;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .cookie-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 14px;
+  gap: 8px;
+  margin-bottom: 12px;
 }
 
 .cookie-btn {
-  border-radius: 10px;
-  padding: 11px 18px;
+  border-radius: 999px;
+  padding: 10px 14px;
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 0.86rem;
   font-weight: 700;
   cursor: pointer;
-  border: 1px solid #d1d5db;
-  background: #fff;
-  color: #111827;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  background: transparent;
+  color: #fff;
   transition: background 0.2s, border-color 0.2s, transform 0.15s;
 }
 
 .cookie-btn:hover {
   transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .cookie-btn-primary {
   border: 0;
   color: #fff;
   background: linear-gradient(90deg, #ff3d8a, #d81b60 50%, #8e24aa);
-  box-shadow: 0 8px 20px rgba(233, 30, 99, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
 }
 
-.cookie-btn-secondary:hover {
-  background: #f9fafb;
+.cookie-btn-primary:hover {
+  background: linear-gradient(90deg, #ff5a9c, #e91e63 50%, #9c27b0);
 }
 
 .cookie-policy-link {
   display: inline-block;
-  color: #111827;
-  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.88rem;
   font-weight: 600;
   text-decoration: underline;
 }
 
 .cookie-prefs {
-  margin-top: 8px;
-  padding-top: 14px;
-  border-top: 1px solid #e5e7eb;
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .cookie-prefs[hidden] {
@@ -257,9 +272,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  padding: 10px 0;
-  border-bottom: 1px solid #f3f4f6;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cookie-pref-row:last-child {
@@ -268,20 +283,21 @@
 
 .cookie-pref-row strong {
   display: block;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   margin-bottom: 2px;
+  color: #fff;
 }
 
 .cookie-pref-row span {
   display: block;
-  font-size: 0.82rem;
-  color: #6b7280;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .cookie-pref-row input {
   width: 18px;
   height: 18px;
-  accent-color: #d81b60;
+  accent-color: #ff4d94;
 }
 
 .cookie-pref-row input:disabled {
@@ -292,6 +308,11 @@
   .legal-header-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .cookie-overlay {
+    inset: auto 12px 12px 12px;
+    width: auto;
   }
 
   .cookie-actions {
