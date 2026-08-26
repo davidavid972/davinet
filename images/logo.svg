@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="dGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF3A8C"/>
+      <stop offset="55%" stop-color="#C43B9A"/>
+      <stop offset="100%" stop-color="#7B3AF5"/>
+    </linearGradient>
+  </defs>
+  <!-- Motion lines -->
+  <rect x="2" y="10" width="14" height="2.2" rx="1.1" fill="url(#dGrad)"/>
+  <rect x="0" y="15.5" width="18" height="2.2" rx="1.1" fill="url(#dGrad)"/>
+  <rect x="3" y="21" width="13" height="2.2" rx="1.1" fill="url(#dGrad)"/>
+  <rect x="1" y="26.5" width="16" height="2.2" rx="1.1" fill="url(#dGrad)"/>
+  <rect x="4" y="32" width="12" height="2.2" rx="1.1" fill="url(#dGrad)"/>
+  <rect x="2" y="37.5" width="14" height="2.2" rx="1.1" fill="url(#dGrad)"/>
+  <!-- D curve -->
+  <path d="M16 8.5 H22 C34 8.5 42 16 42 24 C42 32 34 39.5 22 39.5 H16 V36.5 H22 C31.5 36.5 38.5 30.2 38.5 24 C38.5 17.8 31.5 11.5 22 11.5 H16 V8.5 Z" fill="url(#dGrad)"/>
+</svg>
